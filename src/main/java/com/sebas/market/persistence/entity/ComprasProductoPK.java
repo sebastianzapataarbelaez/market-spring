@@ -2,8 +2,6 @@ package com.sebas.market.persistence.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Embeddable
@@ -14,9 +12,6 @@ public class ComprasProductoPK implements Serializable {
     @Column(name = "id_producto")
     private Integer idProducto;
 
-    @ManyToOne
-    @JoinColumn(name = "id_cliente",insertable = false, updatable = false)
-    private Compra compra;
 
     public Integer getIdCompra() {
         return idCompra;
